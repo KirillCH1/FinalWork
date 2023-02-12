@@ -6,13 +6,13 @@
 
 Console.Clear();
 
-int size = EnteringArraySize("Введите размер массива: ", "Ошибка ввода");
-string[] array = new string[size];
-FillingArray(size);
-string[] shortArray = ShortArray(FindSizeArray(array));
-PrintArray(array);
-Console.Write(" -> ");
-PrintArray(shortArray);
+int size = EnteringArraySize("Введите размер массива: ", "Ошибка ввода");       // Запрашивает у пользователя размер массива
+string[] array = new string[size];                                              // Инициализация массива
+FillingArray(size);                                                             // Заполнение массива данными пользователя
+string[] shortArray = ShortArray(FindSizeArray(array));                         // Инициализирует и заполняет массив строками <=3
+PrintArray(array);                                                              // Выводит первый массив
+Console.Write(" -> ");                                                          // Разделитель
+PrintArray(shortArray);                                                         // Выводит второй массив
 
 
 void PrintArray(string[] printArray)        // Выводит массив на экран
